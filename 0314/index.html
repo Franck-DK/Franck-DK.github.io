@@ -43,6 +43,137 @@
 
 <body>
 
+    <div id="d"></div>
+    <script>
+        "use strict";
+        document.querySelector("#d").style.backgroundColor = "green";
+        document.querySelector("#d").style.height = "50px";
+        document.querySelector("#d").innerHTML = `<h1>title</h1>`;
+    </script>
+
+    <script>
+
+        `use strict`;//not mandatory
+        let v1;//local, undefined
+        var v2;//global
+
+        v1 = 20;//number, int
+        v1 = "Tom";//string
+        v2 = 22;
+
+        {//block, scope, world
+
+            let v3;//local
+            var v4;//global
+            v3 = 3;
+            v4 = 4;
+
+            console.log(v3);
+            console.log(v4);
+
+            let v5 = 10; //local
+            //world 1
+        }
+
+
+    </script>
+
+    <script>
+        `use strict`;
+        console.log(v2);
+        console.log(v1);
+
+        v2 = "tom";
+        v2 = 'tom';
+
+        let age1 = 20;
+        let name = "tom";
+
+        v2 = `tom`;
+
+        v2 = `The name is ${name} the age is ${age1}`;
+        console.log(v2);
+
+        //object
+        v2 = {
+            name: "Tom",
+            age: 20,
+            grade: 96.6,
+        };
+        console.log(v2.grade);
+
+
+        //array
+        v2 = [96.6, 60, 50, 40];
+        console.log(v2.length);
+
+        for (let i = 0; i < v2.length; i++)
+        {
+            console.log(v2[i]);
+        }
+
+        //function
+        //way 1
+
+        function func1(p1,p2)
+        {
+            return p1 + p2;
+        }
+
+        console.log(func1(2.3, 3));
+        v2 = func1;
+
+        console.log(v2(2.3, 3));
+
+        //way 2
+       v2 =  (p1, p2) =>
+        {
+
+           return p1 * p2;
+
+        };
+
+        console.log(v2(2, 3));
+
+        //map(), it is like the select extension function, it is going to create a new array
+        v2 = [96.6, 60, 50, 40];
+
+        let v6;
+        v6 = v2.map((x) =>
+        {
+            return x +10;
+        });
+        console.log(v2);
+        console.log(v6);
+
+        function func2(g) {
+
+            if (g >= 90)
+            {
+                return "A";
+            }
+            else
+            {
+                return "Not A";
+            }
+        }
+        v6=v2.map(func2);
+        console.log(v6);
+       
+
+    </script>
+
+    <script>
+            `use strict`;
+        let v3;
+        v3 = 9;
+        console.log(v3);
+        var v4;
+        console.log(v4);
+
+    </script>
+
+
     <img id="img1" src="static/head1.png" style="height:200px;"/>
     <img id="img2" src="static/a.svg" style="height:200px;"/>
     <img id="img3" src="static/b.svg" style="height:200px;"/>
